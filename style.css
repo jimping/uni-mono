@@ -253,3 +253,38 @@ main, section {
     transform: translateX(-50%);
     max-width: 700px;
 }
+
+
+/* EIGHT */
+
+#eight {
+    overflow: visible;
+    background: var(--var-green-gray) url('images/sunset.png') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: var(--var-text)
+}
+
+#eight > div {
+    background: url('images/sunset-boat.png') bottom center no-repeat;
+    background-size: 100% 100%;
+    height: 100%
+}
+
+#eight .inner {
+    display: block;
+    position: absolute;
+    top: -60vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+}
+
+#eight .gradient-separator-top {
+    background: linear-gradient(-180deg, var(--var-green-gray) 0%, #F7A535 100%);
+    height: 250px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+}

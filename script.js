@@ -8,6 +8,8 @@
     var fifth = document.querySelector('#fifth');
     var seven = document.querySelector('#seven');
     var sevenInner = document.querySelector('#seven > div');
+    var eight = document.querySelector('#eight');
+    var eightInner = document.querySelector('#eight > div');
 
     function buildAnimations() {
         var offset = window.scrollY;
@@ -64,9 +66,6 @@
                 var tx1 = 1 - tx; // Anfangswert 1
                 third.style.opacity = 0 - (5.5 - r);
                 moon.style.backgroundPosition = (-20 + (t * 120)) + '% ' + (12 - (t1 * 30) + (tx1 * 30)) + '%';
-                if (r >= 7) {
-                    //moon.style.backgroundPosition = (-20 + (t * 120)) + '% ' +  (30 + (t1 * 30)) + '%';
-                }
             } else if (r >= 7.5) {
                 third.style.opacity = 1;
             }
@@ -118,6 +117,21 @@
             }
         } // r = 15
 
+        function eightSection() {
+            let s = 15.5, e = 16.5, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+
+            if (r <= s) {
+                eightInner.style.backgroundPosition = '50% -20vh';
+                eightInner.style.backgroundSize = '100%';
+            } else if (r > s && r < 16) {
+                eightInner.style.backgroundPosition = `50% ${20 - tx * 40}vh`;
+                eightInner.style.backgroundSize = `${100 + t * 60}%`;
+            } else if (r >= 16) {
+                eightInner.style.backgroundPosition = '50% 0.25vh';
+                eightInner.style.backgroundSize = '130%';
+            }
+        } // r = 17
+
         introSection();
         firstSection();
         secondSection();
@@ -126,6 +140,7 @@
         fifthSection();
         sixSection();
         sevenSection();
+        eightSection();
     }
 
     buildAnimations();
