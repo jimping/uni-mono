@@ -121,14 +121,11 @@
             let s = 15.5, e = 16.5, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
 
             if (r <= s) {
-                eightInner.style.backgroundPosition = '50% -20vh';
-                eightInner.style.backgroundSize = '100%';
-            } else if (r > s && r < 16) {
-                eightInner.style.backgroundPosition = `50% ${20 - tx * 40}vh`;
-                eightInner.style.backgroundSize = `${100 + t * 60}%`;
-            } else if (r >= 16) {
-                eightInner.style.backgroundPosition = '50% 0.25vh';
-                eightInner.style.backgroundSize = '130%';
+                eightInner.style.backgroundPosition = '50% -10vh';
+            } else if (r > s && r < e) {
+                eightInner.style.backgroundPosition = `50% ${30 - tx * 40}vh`;
+            } else if (r >= e) {
+                eightInner.style.backgroundPosition = '50% 30vh';
             }
         } // r = 17
 
