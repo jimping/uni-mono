@@ -2,6 +2,7 @@
     --var-text: #efbebe;
     --var-primary: #030341;
     --var-primary-shadow: rgba(3, 3, 65, 0.44);
+    --var-green-gray: #17293F;
 }
 
 html, body {
@@ -23,6 +24,11 @@ main, section {
 .separator {
     display: block;
     height: 100vh;
+}
+
+.half-separator {
+    display: block;
+    height: 50vh;
 }
 
 .container {
@@ -79,10 +85,11 @@ main, section {
 
 #first .inner {
     display: block;
-    position: relative;
-    top: -50vh;
+    position: absolute;
+    top: -70vh;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 700px;
-    margin: 0 auto;
 }
 
 .one-to-two {
@@ -147,4 +154,102 @@ main, section {
     top: -90px;
     left: 0;
     right: 0;
+}
+
+#third .gradient-separator-bottom {
+    background: linear-gradient(-180deg, #360064 0%, var(--var-primary) 100%);
+    height: 150px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+/** FOURTH **/
+
+#fourth {
+    overflow: visible;
+    background: url('images/fourth/bike-shadow.png') bottom center no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    color: var(--var-text)
+}
+
+#fourth > div {
+    background: url('images/fourth/bike-bg.png') bottom center no-repeat;
+    background-size: 100% 100%;
+    height: 100%
+}
+
+#fourth .inner {
+    display: block;
+    position: absolute;
+    top: -60vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+}
+
+
+/** FIFTH **/
+
+#fifth {
+    overflow: visible;
+    background: url('images/cars.png') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: var(--var-text)
+}
+
+#fifth .inner {
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+}
+
+/* SIXTH */
+
+#sixth {
+    overflow: visible;
+    background: url('images/mountains.png') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: var(--var-text)
+}
+
+#sixth .inner {
+    display: block;
+    position: absolute;
+    top: -20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+}
+
+/* SEVEN */
+
+#seven {
+    overflow: visible;
+    background: var(--var-green-gray) url('images/house-l.png') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: var(--var-text)
+}
+
+#seven > div {
+    background: url('images/house-r.png') bottom center no-repeat;
+    background-size: 100% 100%;
+    height: 100%
+}
+
+#seven .inner {
+    display: block;
+    position: absolute;
+    top: -40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
 }

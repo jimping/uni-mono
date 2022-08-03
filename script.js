@@ -4,6 +4,10 @@
     var second = document.querySelector('#second');
     var third = document.querySelector('#third');
     var moon = document.querySelector('#moon');
+    var fourth = document.querySelector('#fourth');
+    var fifth = document.querySelector('#fifth');
+    var seven = document.querySelector('#seven');
+    var sevenInner = document.querySelector('#seven > div');
 
     function buildAnimations() {
         var offset = window.scrollY;
@@ -56,22 +60,72 @@
                 var t = Math.min(1, (r - 5.5) / 2); // Anfangswert 0
                 var t1 = 1 - t; // Anfangswert 1
 
-                var tx = Math.max(0, (r - 7) * 1.2 ); // Anfangswert 0
+                var tx = Math.max(0, (r - 7) * 1.2); // Anfangswert 0
                 var tx1 = 1 - tx; // Anfangswert 1
                 third.style.opacity = 0 - (5.5 - r);
-                moon.style.backgroundPosition = (-20 + (t * 120)) + '% ' +  (12 - (t1 * 30) + (tx1 * 30)) + '%';
-                if(r >= 7){
+                moon.style.backgroundPosition = (-20 + (t * 120)) + '% ' + (12 - (t1 * 30) + (tx1 * 30)) + '%';
+                if (r >= 7) {
                     //moon.style.backgroundPosition = (-20 + (t * 120)) + '% ' +  (30 + (t1 * 30)) + '%';
                 }
             } else if (r >= 7.5) {
                 third.style.opacity = 1;
             }
+        } // r = 8
+
+        function fourthSection() {
+            let s = 8, e = 10, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+
+            if (r <= s) {
+                fourth.style.backgroundSize = '100% 100%';
+                fourth.style.backgroundPosition = '50% 100%';
+            } else if (r > s && r < e) {
+                fourth.style.backgroundPosition = `0px ${86 + tx * 30}%`;
+                fourth.style.backgroundSize = `100% ${80 + tx * 80}%`;
+            } else if (r >= e) {
+                fourth.style.backgroundSize = '100% 100%';
+                fourth.style.backgroundPosition = '50% 100%';
+            }
         } // r = 9
+
+        function fifthSection() {
+            let s = 9.5, e = 11.5, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+
+            if (r <= s) {
+                fifth.style.backgroundPosition = '50% 100%';
+            } else if (r > s && r < e) {
+                fifth.style.backgroundPosition = `${-30 + tx * 50}vw 20vh`;
+            } else if (r >= e) {
+                fifth.style.backgroundPosition = '50% 100%';
+            }
+        } // r = 9
+
+        function sixSection() {
+
+        } // r = 13
+
+        function sevenSection() {
+            let s = 13, e = 15, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+
+            if (r <= s) {
+                seven.style.backgroundPosition = '50% 100%';
+                sevenInner.style.backgroundPosition = '50% 100%';
+            } else if (r > s && r < e) {
+                seven.style.backgroundPosition = `50% ${-40 + tx * 70}vw`;
+                sevenInner.style.backgroundPosition = `50% ${20 - tx * 40}vw`;
+            } else if (r >= e) {
+                seven.style.backgroundPosition = '50% 100%';
+                sevenInner.style.backgroundPosition = '50% 100%';
+            }
+        } // r = 15
 
         introSection();
         firstSection();
         secondSection();
         thirdSection();
+        fourthSection();
+        fifthSection();
+        sixSection();
+        sevenSection();
     }
 
     buildAnimations();
