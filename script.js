@@ -9,6 +9,9 @@
     var seven = document.querySelector('#seven');
     var sevenInner = document.querySelector('#seven > div');
     var eight = document.querySelector('#eight');
+    var nine = document.querySelector('#ninth > div');
+    var ten = document.querySelector('#ten > div');
+    var tenballon2 = document.querySelector('#ten > div > div');
     var eightInner = document.querySelector('#eight > div');
 
     function buildAnimations() {
@@ -129,6 +132,33 @@
             }
         } // r = 17
 
+        function nineSection() {
+            let s = 17, e = 19, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+            
+            if (r <= s) {
+                nine.style.backgroundPosition = '50% 100%';
+            } else if (r > s && r < e) {
+                nine.style.backgroundPosition = `${-40 + tx * 70}vw 100%`;
+            } else if (r >= e) {
+                nine.style.backgroundPosition = '50% 100%';
+            }
+        }
+
+        function tenSection() {
+            let s = 19, e = 21, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+            
+            if (r <= s) {
+                ten.style.backgroundPosition = '50% 100%';
+                tenballon2.style.backgroundPosition = '-10vw 100%';
+            } else if (r > s && r < e) {
+                ten.style.backgroundPosition = `${-60 + tx * 70}vw 100%`;
+                tenballon2.style.backgroundPosition = `${-(-90 + tx * 170)}vw 100%`;
+            } else if (r >= e) {
+                ten.style.backgroundPosition = '50% 100%';
+                tenballon2.style.backgroundPosition = '50% 100%';
+            }
+        }
+
         introSection();
         firstSection();
         secondSection();
@@ -138,6 +168,8 @@
         sixSection();
         sevenSection();
         eightSection();
+        nineSection();
+        tenSection();
     }
 
     buildAnimations();
