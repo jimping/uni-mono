@@ -366,3 +366,25 @@ main, section {
 #color-seperator-11 {
     background: linear-gradient(-180deg, #2E81C3 0%, #375BFF 100%);
 }
+/* ELEVEM */
+#eleven .inner {
+    display: block;
+    position: absolute;
+    top: -50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+    color: #000;
+}
+
+#eleven .inner p {
+    color: #000;
+}
+
+#eleven {
+    background: url('images/mountains_without.png') top center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    top: -50%;
+    color: var(--var-text)
+}
