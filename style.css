@@ -241,7 +241,7 @@ main, section {
 
 #seven > div {
     background: url('images/house-r.png') bottom center no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     height: 100%
 }
 
@@ -390,7 +390,7 @@ main, section {
     animation-name: mountain;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-direction: alternate; 
+    animation-direction: alternate;
 }
 
 #eleven .trees {
@@ -400,7 +400,7 @@ main, section {
     animation-name: trees;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-direction: alternate; 
+    animation-direction: alternate;
 }
 
 @keyframes trees {
