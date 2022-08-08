@@ -364,9 +364,9 @@ main, section {
 }
 
 #color-seperator-11 {
-    background: linear-gradient(-180deg, #2E81C3 0%, #375BFF 100%);
+    background: linear-gradient(-180deg, #2E81C3 0%, #7EB0F6 100%);
 }
-/* ELEVEM */
+/* ELEVEN */
 #eleven .inner {
     display: block;
     position: absolute;
@@ -382,9 +382,42 @@ main, section {
 }
 
 #eleven {
-    background: url('images/mountains_without.png') top center no-repeat;
+    background: url('images/mountains-eleven.png') top center no-repeat;
     background-size: cover;
     height: 100vh;
     top: -50%;
-    color: var(--var-text)
+    color: var(--var-text);
+    animation-name: mountain;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+#eleven .trees {
+    background: url('images/trees.png');
+    background-size: cover;
+    height: 100%;
+    animation-name: trees;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+@keyframes trees {
+    0%   {background-position: 0% 100%;}
+    100% {background-position: 100% 100%;}
+}
+
+@keyframes mountain {
+    0%   {background-position: 0% 100%;}
+    100% {background-position: 15% 100%;}
+}
+
+#footer {
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
 }

@@ -22,7 +22,7 @@
         console.log(r)
 
         function introSection() {
-            intro.style.backgroundSize = (90 + .5 * offset / 10) + '%'
+            intro.style.backgroundSize = (100 + .5 * offset / 10) + '%'
             introInner.style.backgroundSize = (100 + 1.6 * offset / 10) + '%'
             introInner.style.fontSize = (200 + 4 * offset / 10) + '%'
 
