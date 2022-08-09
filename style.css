@@ -416,6 +416,7 @@ main, section {
 #footer {
     display: flex;
     height: 250px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
