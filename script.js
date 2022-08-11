@@ -93,7 +93,11 @@
             if (r <= s) {
                 fifth.style.backgroundPosition = '50% 100%';
             } else if (r > s && r < e) {
-                fifth.style.backgroundPosition = `${-30 + tx * 50}vw 20vh`;
+                if(window.innerWidth < 767){
+                    fifth.style.backgroundPosition = `${-30 + tx * 50}vw 55vh`;
+                } else {
+                    fifth.style.backgroundPosition = `${-30 + tx * 50}vw 20vh`;
+                }
             } else if (r >= e) {
                 fifth.style.backgroundPosition = '50% 100%';
             }
@@ -110,8 +114,13 @@
                 seven.style.backgroundPosition = '50% 100%';
                 sevenInner.style.backgroundPosition = '50% 100%';
             } else if (r > s && r < e) {
-                seven.style.backgroundPosition = `50% ${-40 + tx * 70}vw`;
-                sevenInner.style.backgroundPosition = `50% ${20 - tx * 40}vw`;
+                if(window.innerWidth < 767){
+                    seven.style.backgroundPosition = `50% ${80 + tx * 70}vw`;
+                    sevenInner.style.backgroundPosition = `50% ${150 - tx * 40}vw`;
+                } else {
+                    seven.style.backgroundPosition = `50% ${-40 + tx * 70}vw`;
+                    sevenInner.style.backgroundPosition = `50% ${20 - tx * 40}vw`;
+                }
             } else if (r >= e) {
                 seven.style.backgroundPosition = '50% 100%';
                 sevenInner.style.backgroundPosition = '50% 100%';
@@ -119,14 +128,17 @@
         } // r = 15
 
         function eightSection() {
-            let s = 15.5, e = 16.5, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+            let s = 15.5, e = 16, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
 
             if (r <= s) {
-                eightInner.style.backgroundPosition = '50% -10vh';
+                eightInner.style.backgroundPosition = '50% 30vh';
+                eightInner.style.backgroundSize = '50% 50%';
             } else if (r > s && r < e) {
-                eightInner.style.backgroundPosition = `50% ${30 - tx * 40}vh`;
+                eightInner.style.backgroundPosition = `50% ${ 11 + tx * 30}vh`;
+                eightInner.style.backgroundSize = `${100 - tx * 40}% ${100 - tx * 40}%`;
             } else if (r >= e) {
                 eightInner.style.backgroundPosition = '50% 30vh';
+                eightInner.style.backgroundSize = '100% 100%';
             }
         } // r = 17
 
@@ -136,7 +148,11 @@
             if (r <= s) {
                 nine.style.backgroundPosition = '50% 100%';
             } else if (r > s && r < e) {
-                nine.style.backgroundPosition = `${-40 + tx * 70}vw 100%`;
+                if(window.innerWidth < 767){
+                    nine.style.backgroundPosition = `${-90 + tx * 70}vw 10%`;
+                } else {
+                    nine.style.backgroundPosition = `${-40 + tx * 70}vw 100%`;
+                }
             } else if (r >= e) {
                 nine.style.backgroundPosition = '50% 100%';
             }
@@ -149,8 +165,13 @@
                 ten.style.backgroundPosition = '50% 100%';
                 tenballon2.style.backgroundPosition = '-10vw 100%';
             } else if (r > s && r < e) {
-                ten.style.backgroundPosition = `${-60 + tx * 70}vw 100%`;
-                tenballon2.style.backgroundPosition = `${-(-90 + tx * 170)}vw 100%`;
+                if(window.innerWidth < 767){
+                    ten.style.backgroundPosition = `${-60 + tx * 70}vw 80%`;
+                    tenballon2.style.backgroundPosition = `${-(-90 + tx * 170)}vw 80%`;
+                } else {
+                    ten.style.backgroundPosition = `${-60 + tx * 70}vw 100%`;
+                    tenballon2.style.backgroundPosition = `${-(-90 + tx * 170)}vw 100%`;
+                }
             } else if (r >= e) {
                 ten.style.backgroundPosition = '50% 100%';
                 tenballon2.style.backgroundPosition = '50% 100%';
