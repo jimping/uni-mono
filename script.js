@@ -15,9 +15,7 @@
     var eightInner = document.querySelector('#eight > div');
 
     function buildAnimations() {
-        var offset = window.scrollY;
-        var h = window.innerHeight;
-        var r = offset / h
+        var offset = window.scrollY, h = window.innerHeight, r = offset / h
 
         console.log(r)
 
@@ -134,7 +132,7 @@
 
         function nineSection() {
             let s = 17, e = 19, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
-            
+
             if (r <= s) {
                 nine.style.backgroundPosition = '50% 100%';
             } else if (r > s && r < e) {
@@ -146,7 +144,7 @@
 
         function tenSection() {
             let s = 19, e = 21, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
-            
+
             if (r <= s) {
                 ten.style.backgroundPosition = '50% 100%';
                 tenballon2.style.backgroundPosition = '-10vw 100%';
