@@ -128,14 +128,16 @@
         } // r = 15
 
         function eightSection() {
-            let s = 15.5, e = 16, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+            let s = 15.55, e = 16, t = Math.min(1, (r - s) / (e - s)), tx = 1 - t;
+
+            let x = 10, y = 50
 
             if (r <= s) {
-                eightInner.style.backgroundPosition = '50% 30vh';
+                eightInner.style.backgroundPosition = '50% 20vh';
                 eightInner.style.backgroundSize = '50% 50%';
             } else if (r > s && r < e) {
-                eightInner.style.backgroundPosition = `50% ${ 11 + tx * 30}vh`;
-                eightInner.style.backgroundSize = `${100 - tx * 40}% ${100 - tx * 40}%`;
+                eightInner.style.backgroundPosition = `50% ${ 20 + t * x}vh`;
+                eightInner.style.backgroundSize = `${50 + t * y}% ${50 + t * y}%`;
             } else if (r >= e) {
                 eightInner.style.backgroundPosition = '50% 30vh';
                 eightInner.style.backgroundSize = '100% 100%';
